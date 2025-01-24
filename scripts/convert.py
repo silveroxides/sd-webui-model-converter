@@ -7,8 +7,8 @@ from modules import shared
 from modules import sd_models, sd_vae
 
 # position_ids in clip is int64. model_ema.num_updates is int32
-dtypes_to_fp16 = {torch.float32, torch.float64, torch.bfloat16}
-dtypes_to_bf16 = {torch.float32, torch.float64, torch.float16}
+dtypes_to_fp16 = {torch.float32, torch.float64, torch.bfloat16, torch.float8_e4m3fn, torch.float8_e5m2}
+dtypes_to_bf16 = {torch.float32, torch.float64, torch.float16, torch.float8_e4m3fn, torch.float8_e5m2}
 dtypes_to_float8_e4m3fn = {torch.float32, torch.float64, torch.bfloat16, torch.float16}
 dtypes_to_float8_e5m2 = {torch.float32, torch.float64, torch.bfloat16, torch.float16}
 
